@@ -1,6 +1,15 @@
 import { Button, Header } from "@pomelo-la/paradis";
 
-export default function Home() {
+export function getStaticProps() {
+  console.log("getStatic");
+  // fetch
+  return {
+    props: {
+      values: [1, 2],
+    },
+  };
+}
+export default function Static() {
   return (
     <div className="bg-monochrome-200 h-full p-80px">
       <Header

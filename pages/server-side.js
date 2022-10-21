@@ -1,6 +1,15 @@
 import { Button, Header } from "@pomelo-la/paradis";
 
-export default function Home() {
+export function getServerSideProps() {
+  // fetch
+  return {
+    props: {
+      values: [1, 2],
+    },
+  };
+}
+
+export default function ServerSide(props) {
   return (
     <div className="bg-monochrome-200 h-full p-80px">
       <Header
@@ -8,7 +17,7 @@ export default function Home() {
         title={"Detalle usuario"}
         subtitle={"Modifica la información personal de este usuario."}
       />
-
+      {props?.values}
       <Button>Guardar Cambios</Button>
     </div>
   );
