@@ -9,7 +9,7 @@ export function getStaticProps() {
     },
   };
 }
-export default function Static() {
+export default function Static(props) {
   return (
     <div className="bg-monochrome-200 h-full p-80px">
       <Header
@@ -17,7 +17,7 @@ export default function Static() {
         title={"Detalle usuario"}
         subtitle={"Modifica la información personal de este usuario."}
       />
-
+      {props.values}
       <Button>Guardar Cambios</Button>
     </div>
   );

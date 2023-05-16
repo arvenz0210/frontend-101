@@ -2,6 +2,8 @@ import { Button, Header } from "@pomelo-la/paradis";
 
 export function getServerSideProps() {
   // fetch
+  // Connect
+  // file
   return {
     props: {
       values: [1, 2],
