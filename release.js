@@ -9,6 +9,7 @@ const git = simpleGit();
 git
   .status((err, status) => {
     console.log(status, err);
+    console.log("isClean", status.isClean());
   })
   .add(".")
   .then(() => {
