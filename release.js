@@ -13,7 +13,7 @@ git
   })
   .add(".")
   .commit("Primer commit")
-  .push("origin", "main")
+  .push()
   .then(() => {
     console.log("Archivos agregados a Git");
   })
