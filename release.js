@@ -12,10 +12,10 @@ git
     console.log("isClean", status.isClean());
   })
   .add(".")
+  .commit("Primer commit")
   .then(() => {
     console.log("Archivos agregados a Git");
   })
   .catch((error) => {
     console.error("Error al agregar archivos a Git:", error);
   });
-
